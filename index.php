@@ -199,6 +199,7 @@
         });
     }
     ?>
+    
     <!-- Add From and edit from -->
     <?php if (isset($editEntry)){ ?>
         <h2>Edit Form Entry</h2>
@@ -254,6 +255,7 @@
     </form>
    <?php } ?>
 
+
    <br>
     <!-- Listing Data -->
     <h5>All Submitted Data:</h5>
@@ -301,7 +303,6 @@
                 for (var i = 0; i < fileInput.files.length; i++) {
                     var file = fileInput.files[i];
                     var reader = new FileReader();
-
                     reader.onload = function (event) {
                         var image = document.createElement('img');
                         image.classList.add('preview-image');
@@ -311,7 +312,6 @@
                         editImagePreview.innerHTML = ''; // Clear the edit preview
                         
                     };
-
                     reader.readAsDataURL(file);
                 }
             }
