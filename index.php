@@ -50,6 +50,7 @@
         if (file_exists($filename)) {
             $fileData = file($filename);
             $formData = [];
+            $lastID=0;
             foreach ($fileData as $line) {
                 $entry = unserialize(trim($line));
                 $lastID = $entry['id'];
@@ -107,7 +108,6 @@
 
     // Add / Edit activity
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
         if (isset($_POST['id']) && $_POST['id']!=''){
             $id=base64_decode($_GET['id']);
             $formData = readFormData();
@@ -159,7 +159,6 @@
             saveFormData($entry);
             echo "<b>Form data submitted successfully!</b>";
         } 
-        
     }else{
         // Handle edit and delete actions
         if (isset($_GET['action'])) {
@@ -199,10 +198,9 @@
             return $a['id'] - $b['id'];
         });
     }
-
-
     ?>
-<?php if (isset($editEntry)){ ?>
+    <!-- Add From and edit from -->
+    <?php if (isset($editEntry)){ ?>
         <h2>Edit Form Entry</h2>
         <div id="editImagePreview">
                 <img class="preview-image" src="<?php echo $editEntry['file']; ?>">
@@ -254,11 +252,10 @@
         </div>
         <button type="submit" class="form-control">Submit</button>
     </form>
-    
-
    <?php } ?>
 
    <br>
+    <!-- Listing Data -->
     <h5>All Submitted Data:</h5>
     <div class="table-container">
         <table class="table table-striped">
@@ -293,8 +290,8 @@
     </div>
 
     
+    <!-- script Start -->
     <script>
-        
         function handleImagePreview(event) {
             var fileInput = event.target;
             var imagePreview = document.getElementById('imagePreview');
