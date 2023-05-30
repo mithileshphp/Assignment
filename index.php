@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <title>Assigment For Shyam Future Tech</title>
+    <title>Shyam Future Tech</title>
     <style>
         table {
             border-collapse: collapse;
@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <h3 style ="text-align: center;">Assigment For Shyam Future Tech</h3>
+    <h3 style ="text-align: center;">Web Application For Shyam Future Tech</h3>
     <br>
     </br>
 
@@ -199,10 +199,10 @@
         });
     }
     ?>
-    
+
     <!-- Add From and edit from -->
     <?php if (isset($editEntry)){ ?>
-        <h2>Edit Form Entry</h2>
+        <h4>Edit Form Data</h4>
         <div id="editImagePreview">
                 <img class="preview-image" src="<?php echo $editEntry['file']; ?>">
             </div>
