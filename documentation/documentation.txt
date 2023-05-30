@@ -1,0 +1,30 @@
+Web Application feature 
+-- Form Input --
+1.Input Name with placeholder and simple validation 
+2.Input Address with placeholder and simple validation 
+3.Gender Drop down male and female 
+4.uplaod images 
+5.Submit button to submit all input data with particuler massage (Form data submitted successfully!)
+
+-- Form Functionlity Details --
+Form Method use - Post Method 
+All data store and update into form_data.txt text file 
+Images Upload Inside the uploads folder 
+
+--- Listing Data ---
+ID and Name Sorting data User can sort data by Name & ID
+Imgaes preview click images are downloading
+Scrolling the list should be smooth user can scolling all listing data 
+Action -
+click Edit - then open edit form  and user can update data with partculer massage (Form data updated successfully!)
+click View - Next Tag open images view
+Click Delete -  User can delete data with partculer massage (Data deleted successfully!)
+
+
+
+
+
+
+
+
+
